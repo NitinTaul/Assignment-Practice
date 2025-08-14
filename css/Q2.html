@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Property Demo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  /* Common style for all boxes */
+  .box {
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  /* Display variations */
+  .block {
+    display: block;
+    width: 100%;
+    background-color: lightgreen;
+  }
+
+  .inline {
+    display: inline;
+    background-color: lightcoral;
+  }
+
+  .inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .none {
+    display: none;
+    background-color: lightpink;
+  }
+
+  /* Button for toggle */
+  button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  
+
+<h1>CSS Display Property Demo</h1>
+
+<h2>Block</h2>
+<div class="box block">Block Element 1 (takes whole row)</div>
+<div class="box block">Block Element 2 (starts on new row)</div>
+
+<h2>Inline</h2>
+<span class="box inline">Inline 1</span>
+<span class="box inline">Inline 2</span>
+<span class="box inline">Inline 3</span>
+
+<h2>Inline-Block</h2>
+<div class="box inline-block">Inline-Block 1</div>
+<div class="box inline-block">Inline-Block 2</div>
+<div class="box inline-block">Inline-Block 3</div>
+
+<h2>None (Hidden)</h2>
+<div id="hiddenBox" class="box none">You can't see me until you click the button!</div>
+<button onclick="toggleHidden()">Toggle Hidden Element</button>
+
+<script>
+  function toggleHidden() {
+    const box = document.getElementById("hiddenBox");
+    box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+  }
+</script>
+</body>
+</html>

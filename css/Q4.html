@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix Layout</title>
+<style>/* Reset and predictable sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container: Flexbox for alignment and wrapping */
+.container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap; /* allows items to wrap on smaller screens */
+}
+
+/* Boxes */
+.box {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 100px; /* vertically center text */
+  font-weight: bold;
+}
+
+/* Text */
+.text {
+  position: relative;
+  margin: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .box {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 90%;
+    height: auto;
+    line-height: normal;
+    padding: 20px 0;
+  }
+}
+
+</style>
+</head>
+<body>
+    <h1>Debugging Task</h1>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+    <p class="text">Fix my position!</p>
+</body>
+</html>

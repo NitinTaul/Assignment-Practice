@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main {
+            display: flex;
+            gap: 40px;
+            border-radius: 14px;
+            flex-wrap: wrap;
+        }
+
+        main div {
+            padding: 10px;
+            border-radius: 18px;
+            margin: 0;
+            text-align: center;
+            align-items: center;
+            background-color: whitesmoke;
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        main div img {
+            width: 30%;
+            height: auto;
+        }
+
+        main div p {
+            padding-top: 5px;
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 1.5
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Masai In Spotlight</h1>
+    <main>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/image_21_29c1eaa601.webp"
+                alt="Masai School's Growth News">
+            <p>Masai School's Growth Driven by a 300% Increase in Student Placement Amid Market Jitters</p>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/image_19_03a89b90c1.webp"
+                alt="Masai School Series B Funding">
+            <p>JobTech Startup Masai School Raises $10 Million In Series B</p>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/image_22_fff460fbfa.webp"
+                alt="Masai School Revenue Growth">
+            <p>Masai School targets fivefold revenue growth in three years</p>
+        </div>
+    </main>
+</body>
+
+</html>
